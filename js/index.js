@@ -70,5 +70,12 @@ for(let i = 0; i < arrayHeading.length; i++) {
   middleSectionHeading[i].textContent = siteContent['main-content'][arrayHeading[i]];
 }
 
+//Update middle section paragraphs
 
+let middleSectionParas = document.querySelectorAll('.text-content p');
+console.log(middleSectionParas);
+let arrayParas = ['features-content', 'about-content', 'services-content', 'product-content', 'vision-content'];
+for(let i = 0; i < arrayParas.length; i++) {
+  middleSectionParas[i].textContent = siteContent['main-content'][arrayParas[i]];
+}
 
