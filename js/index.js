@@ -54,7 +54,7 @@ let buttonText = document.querySelector('.cta-text button');
 buttonText.textContent = siteContent['cta']['button'];
 
 //Adjust the display for heading and button div
-let titleBox = document.querySelector('.cta-text');
+let titleBox = document.querySelector('.cta .cta-text')
 
 //update text for nav items
 let navItems = document.querySelectorAll('nav a');
@@ -105,13 +105,13 @@ item7.textContent = 'Explore!';
 item7.style.color = 'green';
 document.querySelector("nav").appendChild(item7);
 
+
 // Add a first item to the nav element using prepend
 let firstItem = document.createElement('a');
 firstItem.setAttribute('href', '#');
 firstItem.textContent = 'Begin';
 firstItem.style.color = 'green';
-firstItem.style.paddingRight = '1.5rem';
-document.querySelector('nav a').prepend(firstItem);
+document.querySelector("nav").prepend(firstItem);
 
 
 
