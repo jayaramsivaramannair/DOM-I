@@ -79,3 +79,11 @@ for(let i = 0; i < arrayParas.length; i++) {
   middleSectionParas[i].textContent = siteContent['main-content'][arrayParas[i]];
 }
 
+//Update footer para
+let footerPara = document.querySelector('footer p');
+footerPara.textContent = siteContent['footer']['copyright'];
+
+//Update contact section heading
+let contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+
