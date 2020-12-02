@@ -98,3 +98,20 @@ for(let i = 0; i < arrayContact.length; i++) {
   contactParas[i].textContent = siteContent['contact'][arrayContact[i]];
 }
 
+// Add a new link at the end using appendChild
+let item7 = document.createElement('a');
+item7.setAttribute('href', "#");
+item7.textContent = 'Explore!';
+item7.style.color = 'green';
+document.querySelector("nav").appendChild(item7);
+
+// Add a first item to the nav element using prepend
+let firstItem = document.createElement('a');
+firstItem.setAttribute('href', '#');
+firstItem.textContent = 'Begin';
+firstItem.style.color = 'green';
+firstItem.style.paddingRight = '1.5rem';
+document.querySelector('nav a').prepend(firstItem);
+
+
+
