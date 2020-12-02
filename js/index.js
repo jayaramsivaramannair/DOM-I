@@ -87,3 +87,10 @@ footerPara.textContent = siteContent['footer']['copyright'];
 let contactHeading = document.querySelector('.contact h4');
 contactHeading.textContent = siteContent['contact']['contact-h4'];
 
+//Update text for paragraph tags inside contact section
+let arrayContact = ['address', 'phone', 'email'];
+let contactParas = document.querySelectorAll('.contact p');
+for(let i = 0; i < arrayContact.length; i++) {
+  contactParas[i].textContent = siteContent['contact'][arrayContact[i]];
+}
+
