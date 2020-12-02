@@ -59,3 +59,16 @@ for(let i = 1; i <= navItems.length; i++) {
   navItems[i-1].textContent = siteContent['nav']['nav-item-' + i];
 }
 
+//Update middle image
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//Update middle section heading
+let arrayHeading = ['features-h4', 'about-h4', 'services-h4', 'product-h4', 'vision-h4'];
+let middleSectionHeading = document.querySelectorAll('.text-content h4');
+for(let i = 0; i < arrayHeading.length; i++) {
+  middleSectionHeading[i].textContent = siteContent['main-content'][arrayHeading[i]];
+}
+
+
+
