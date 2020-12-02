@@ -53,10 +53,14 @@ title.textContent = siteContent['cta']['h1'];
 let buttonText = document.querySelector('.cta-text button');
 buttonText.textContent = siteContent['cta']['button'];
 
+//Adjust the display for heading and button div
+let titleBox = document.querySelector('.cta-text');
+
 //update text for nav items
 let navItems = document.querySelectorAll('nav a');
 for(let i = 1; i <= navItems.length; i++) {
   navItems[i-1].textContent = siteContent['nav']['nav-item-' + i];
+  navItems[i-1].style.color = "green";
 }
 
 //Update middle image
