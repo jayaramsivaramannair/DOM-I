@@ -46,8 +46,17 @@ let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 //update title text
+let titleText = siteContent['cta']['h1'];
+let words = titleText.split(" ");
+let completeString = "";
+console.log(words.length);
+for(i = 0; i < words.length - 1; i++) {
+  completeString += words[i] + "\n";
+}
+completeString += words[words.length-1];
+console.log(completeString);
 let title = document.querySelector('.cta-text h1');
-title.textContent = siteContent['cta']['h1'];
+title.innerText = completeString;
 
 //update button text
 let buttonText = document.querySelector('.cta-text button');
