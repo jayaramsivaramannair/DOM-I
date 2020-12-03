@@ -40,3 +40,87 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Update header image
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//update title text
+let titleText = siteContent['cta']['h1'];
+let words = titleText.split(" ");
+let completeString = "";
+console.log(words.length);
+for(i = 0; i < words.length - 1; i++) {
+  completeString += words[i] + "\n";
+}
+completeString += words[words.length-1];
+console.log(completeString);
+let title = document.querySelector('.cta-text h1');
+title.innerText = completeString;
+
+//update button text
+let buttonText = document.querySelector('.cta-text button');
+buttonText.textContent = siteContent['cta']['button'];
+
+//Adjust the display for heading and button div
+let titleBox = document.querySelector('.cta .cta-text')
+
+//update text for nav items
+let navItems = document.querySelectorAll('nav a');
+for(let i = 1; i <= navItems.length; i++) {
+  navItems[i-1].textContent = siteContent['nav']['nav-item-' + i];
+  navItems[i-1].style.color = "green";
+}
+
+//Update middle image
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//Update middle section heading
+let arrayHeading = ['features-h4', 'about-h4', 'services-h4', 'product-h4', 'vision-h4'];
+let middleSectionHeading = document.querySelectorAll('.text-content h4');
+for(let i = 0; i < arrayHeading.length; i++) {
+  middleSectionHeading[i].textContent = siteContent['main-content'][arrayHeading[i]];
+}
+
+//Update middle section paragraphs
+
+let middleSectionParas = document.querySelectorAll('.text-content p');
+console.log(middleSectionParas);
+let arrayParas = ['features-content', 'about-content', 'services-content', 'product-content', 'vision-content'];
+for(let i = 0; i < arrayParas.length; i++) {
+  middleSectionParas[i].textContent = siteContent['main-content'][arrayParas[i]];
+}
+
+//Update footer para
+let footerPara = document.querySelector('footer p');
+footerPara.textContent = siteContent['footer']['copyright'];
+
+//Update contact section heading
+let contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+
+//Update text for paragraph tags inside contact section
+let arrayContact = ['address', 'phone', 'email'];
+let contactParas = document.querySelectorAll('.contact p');
+for(let i = 0; i < arrayContact.length; i++) {
+  contactParas[i].textContent = siteContent['contact'][arrayContact[i]];
+}
+
+// Add a new link at the end using appendChild
+let item7 = document.createElement('a');
+item7.setAttribute('href', "#");
+item7.textContent = 'Explore!';
+item7.style.color = 'green';
+document.querySelector("nav").appendChild(item7);
+
+
+// Add a first item to the nav element using prepend
+let firstItem = document.createElement('a');
+firstItem.setAttribute('href', '#');
+firstItem.textContent = 'Begin';
+firstItem.style.color = 'green';
+document.querySelector("nav").prepend(firstItem);
+
+
+
